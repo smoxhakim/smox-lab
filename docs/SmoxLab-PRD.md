@@ -55,7 +55,7 @@ design → preview (AR) → confirm → print → pickup — all within a single
 | Increase AR engagement | % of orders that use the AR try-on step | ≥ 75% |
 | Fast fulfillment | Avg. time from order confirmation to pickup | ≤ 12 minutes |
 | Creator monetization | Active influencer accounts publishing designs | 50+ at launch |
-| Platform expansion | SaaS pilot stores signed | 3 within 12 months |
+| Brand expansion | Additional company-owned Smox Lab locations opened | 3 within 12 months |
 
 ---
 
@@ -77,9 +77,9 @@ design → preview (AR) → confirm → print → pickup — all within a single
 - Goal: Monitor orders, manage printer queues, track sales
 - Needs: Real-time admin dashboard, printer status, inventory alerts
 
-### 4. The Brand / Retailer (SaaS Customer)
-- Goal: License Smox Lab technology for their own stores
-- Needs: White-label kiosk software, API access, reporting
+### 4. ~~The Brand / Retailer (SaaS Customer)~~ — REMOVED
+
+**Removed 2026-05-15** per `docs/adr/0000-multi-tenancy.md`. Smox Lab is a single-brand multi-location business operated by one company, not a SaaS platform licensed to third-party retailers. There is no external retailer persona. Brand-wide operations and per-location operations are handled by extensions of Persona #3 (Store Operator) — a future Regional Manager role may emerge but is out of scope for v1.
 
 ---
 
@@ -398,7 +398,7 @@ Store operators can configure the following in the admin dashboard:
 | **Performance** | Kiosk UI renders at ≥ 60 fps; AR at ≥ 24 fps |
 | **Reliability** | System uptime ≥ 99.5% during store hours |
 | **Latency** | AI design generation response ≤ 6 seconds |
-| **Scalability** | Backend supports 10 concurrent kiosks per store, 100 stores via SaaS |
+| **Scalability** | Backend supports 10 concurrent kiosks per store and scales to 100 company-owned Smox Lab locations |
 | **Security** | PCI-DSS compliance handled by cashier POS system (outside kiosk scope); GDPR compliance for EU; no PII in logs |
 | **Offline resilience** | Kiosk functions in limited mode if internet drops (no AI, no AR cloud sync) |
 | **Data retention** | AR photos deleted after 24h unless opt-in; design files retained 90 days |
